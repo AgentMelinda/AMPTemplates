@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 25200,
+        "Ref": "ApplicationPort1",
+        "Name": "Game Port",
+        "Description": "Primary game server port"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 25201,
+        "Ref": "ApplicationPort2",
+        "Name": "Query Port",
+        "Description": "Server query/status port"
+    }
+]
