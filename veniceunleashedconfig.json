@@ -1,0 +1,49 @@
+[
+    {
+        "DisplayName": "Server Name",
+        "Category": "VeniceUnleashed:Basic:1",
+        "Subcategory": "Basic",
+        "Description": "Server name in browser",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "Required": true,
+        "DefaultValue": "Venice Unleashed BF3",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max Players",
+        "Category": "VeniceUnleashed:Gameplay:3",
+        "Subcategory": "Players",
+        "Description": "Maximum players",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "IsFlagArgument": false,
+        "DefaultValue": "64",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "VeniceUnleashed:Security:4",
+        "Subcategory": "Access",
+        "Description": "Server password",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "RCON Password",
+        "Category": "VeniceUnleashed:Security:4",
+        "Subcategory": "Access",
+        "Description": "Admin password",
+        "FieldName": "$RemoteAdminPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "DefaultValue": "changeme",
+        "EnumValues": {}
+    }
+]
