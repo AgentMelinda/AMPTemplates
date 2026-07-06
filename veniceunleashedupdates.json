@@ -1,1 +1,14 @@
+[
+    {
+        "UpdateStageName": "Download Venice Unleashed",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/VeniceUnleashed/VeniceUnleashed/releases/download/latest/veniceunleashed-linux.tar.gz",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    }
+]
 
