@@ -2,15 +2,22 @@
     {
         "Protocol": "UDP",
         "Port": 25200,
-        "Ref": "ApplicationPort1",
+        "Ref": "GamePort",
         "Name": "Game Port",
-        "Description": "Primary game server port"
+        "Description": "Frostbite networking layer (primary game port)"
     },
     {
         "Protocol": "UDP",
-        "Port": 25201,
-        "Ref": "ApplicationPort2",
-        "Name": "Query Port",
-        "Description": "Server query/status port"
+        "Port": 7948,
+        "Ref": "HarmonyPort",
+        "Name": "Harmony Port",
+        "Description": "Monitored Harmony VU networking layer"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 47200,
+        "Ref": "RCONPort",
+        "Name": "RCON Port",
+        "Description": "Remote administration protocol"
     }
 ]
