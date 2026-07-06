@@ -1,0 +1,43 @@
+[
+    {
+        "UpdateStageName": "Battlefield 3 Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1238820",
+        "UpdateSourceArgs": "1238820",
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Download VU Client",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p \\\"{{$FullRootDir}}client\\\" && cd \\\"{{$FullRootDir}}client\\\" && wget -q https://veniceunleashed.net/files/vu.zip && unzip -o vu.zip && rm vu.zip\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Initialise Wine",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win32 WINEDEBUG=-all /usr/bin/wineboot --init --update\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Install Visual C++ 2008 Redistributable",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd /tmp && wget -q -nc https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x86.exe && WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win32 WINEDEBUG=-all xvfb-run -a /usr/bin/wine /tmp/vcredist_x86.exe /q\"",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Create Instance Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p \\\"{{$FullRootDir}}instance\\\"\"",
+        "SkipOnFailure": true
+    }
+]
